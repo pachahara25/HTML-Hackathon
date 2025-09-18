@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 1 - How the Internet Works</title>
+</head>
+<body>
+    <h1>Lecture 1 – How the Internet Works</h1>
+    <h2>Defence Course - Day 1</h2>
+    <hr>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td><iframe width="500" height="250" src="https://www.youtube.com/embed/1pcikNlDB-4?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X" title="Introduction To Web Development | Internet Working | Web Development Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+        </tr>
+    </table>
+    <hr>
+    <h2>1.Basics</h2>
+    <ul>
+        <li>Internet = Network of computers sharing information.</li>
+        <li>Direct connection → Send 1s & 0s via cable (Ethernet/Fiber).</li>
+        <li><b>Problem of Scale:</b> Too many devices → use <b>Switch</b> (Local Network).</li>
+        <li><b>Connecting Networks:</b> Routers connect multiple local networks → Internet = "network of networks."</li>
+    </ul> 
+    <h2>2.Addressing</h2>
+    <ul>
+        <li>Need unique ID for each device → <b>IP Address</b>.</li>
+        <li><b>IPv4:</b> 32-bit (4.3B addresses). Shortage led to Public/Private IP.</li>
+        <li><b>Public IP:</b> Unique on internet, given by ISP.</li>
+        <li><b>Private IP:</b> Local, reused in home/office (192.168.x.x).</li>
+        <li><b>IPv6:</b> 128-bit, huge supply (~340 undecillion addresses).</li>
+    </ul>
+    <h2>3.Data Transfer (Reliability)</h2>
+    <ul>
+        <li>Large files split into small <b>packets</b>.</li>
+        <li>Each packet has sender IP, receiver IP, sequence number.</li>
+        <li>Rules for sending/receiving = <b>TCP/IP protocol</b>.</li>
+    </ul>
+    <h2>4.MAC Address</h2>
+    <ul>
+        <li>Unique hardware ID (burned in every device).</li>
+        <li>Format examples: 3C:22:FB:A3:B4:C5 or 3c22.fba3.b4c5.</li>
+        <li>Used for local device identification.</li>
+    </ul>
+    <h2>5.Ports</h2>
+    <ul>
+        <li>Ports identify specific services on a device.</li>
+        <li><b>Range:</b> 0–65535 (16-bit).</li>
+        <li><b>Categories:</b>
+            <ul>
+                <li><b>Well-known (0–1023):</b> HTTP(80), HTTPS(443), DNS(53), SSH(22).</li>
+                <li><b>Registered (1024–49151):</b> MongoDB(27017), MySQL(3306), React dev(3000).</li>
+                <li><b>Dynamic (49152–65535):</b> Temporary client ports.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>6.DNS (Domain Name System)</h2>
+    <ul>
+        <li>Converts <b>domain → IP address</b>.</li>
+        <li><b>Steps:</b>
+            <ol>
+                <li>Check browser/OS/router cache.</li>
+                <li>If not found, ask Recursive Resolver (ISP/Google 8.8.8.8).</li>
+                <li>Root server → TLD server (.com, .org) → Authoritative server.</li>
+                <li>IP returned & cached for faster use.</li>
+                <li>Browser connects to that IP on correct port (e.g., 443).</li>
+             </ol>
+        </li>
+    </ul>
+<hr>
+<p><a href="./index.html">← Back to Home</a></p>
+<p><b>Next:</b> <a href="./lecture2.html">Day 2 - HTML Basics →</a></p>
+</body>
+</html>

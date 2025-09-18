@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+</head>
+<body>
+  <h2>Website Feedback Form</h2>
+  <form>
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <br><br>
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+    <label>Rate Our Website:</label><br>
+    <input type="radio" name="rating" value="1"> 1
+    <input type="radio" name="rating" value="2"> 2
+    <input type="radio" name="rating" value="3"> 3
+    <input type="radio" name="rating" value="4"> 4
+    <input type="radio" name="rating" value="5"> 5
+    <br><br>
+    <label for="feedback">Your Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="40" placeholder="Write your feedback here..." required></textarea>
+    <br><br>
+    <label for="suggestion">Any Suggestions?</label><br>
+    <textarea id="suggestion" name="suggestion" rows="3" cols="40" placeholder="Your suggestions..."></textarea>
+    <br><br>
+    <button type="submit">Submit Feedback</button>
+  </form>
+</body>
+</html>

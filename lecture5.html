@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 5 - Forms in HTML</title>
+</head>
+<body>
+
+  <h1>Lecture 5: HTML Forms</h1>
+  <h2>Defence Course - Day 5</h2>
+  <hr>
+
+  <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td>
+              <iframe width="500" height="250" src="https://www.youtube.com/embed/a4j9R_DvZ8M?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X" title="HTML Forms From Beginner to Advance | HTML Full Course #04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+        </tr>
+  </table>
+  <hr>
+
+  <h2>Why Forms?</h2>
+  <ul>
+    <li>Web needs to collect info from users.</li>
+    <li>Without forms → no login, signup, search, comments, etc.</li>
+    <li><code>&lt;form&gt;</code> solves: display fields, collect + send data.</li>
+  </ul>
+
+  <h2>1. Basic Input</h2>
+  <pre><code>&lt;input type="text"&gt;</code></pre>
+  <ul>
+    <li>Single-line text box.</li>
+    <li>Use <code>&lt;label&gt;</code> for meaning.</li>
+    <li>Connect <code>label</code> + <code>input</code> with <b>id</b> and <b>for</b>.</li>
+  </ul>
+
+  <h2>2. Submit Data</h2>
+  <ul>
+    <li>Wrap inputs in <code>&lt;form&gt;</code>.</li>
+    <li>Add <code>&lt;input type="submit"&gt;</code> or <code>&lt;button type="submit"&gt;</code>.</li>
+    <li><code>name</code> attribute = key for submitted data.</li>
+  </ul>
+
+  <h2>3. Radio Buttons (Select One)</h2>
+  <pre><code>&lt;input type="radio" name="shirtSize" value="small"&gt;</code></pre>
+  <ul>
+    <li>Only one option can be chosen.</li>
+    <li>Same <code>name</code> = one group.</li>
+    <li>Each needs unique <code>id</code> and <code>value</code>.</li>
+  </ul>
+
+  <h2>4. Checkboxes (Select Many)</h2>
+  <pre><code>&lt;input type="checkbox" name="toppings" value="pepperoni"&gt;</code></pre>
+  <ul>
+    <li>Multiple selections allowed.</li>
+    <li>Same <code>name</code> groups them.</li>
+    <li>Each has unique <code>id</code> and <code>value</code>.</li>
+  </ul>
+
+  <h2>5. Textarea</h2>
+  <pre><code>&lt;textarea rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+  <ul>
+    <li>Multi-line text input.</li>
+    <li>Use for comments, addresses, etc.</li>
+  </ul>
+
+  <h2>6. Dropdown</h2>
+  <pre><code>
+&lt;select name="country"&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+  <ul>
+    <li>Compact list of many options.</li>
+    <li><code>value</code> is submitted, text is displayed.</li>
+  </ul>
+
+  <h2>7. HTML5 Inputs</h2>
+  <ul>
+    <li><code>type="password"</code> → hides text.</li>
+    <li><code>type="number" min="18" max="99"</code> → range control.</li>
+    <li><code>type="date"</code> → calendar picker.</li>
+    <li>Other: <code>color</code>, <code>range</code>, <code>file</code>, <code>placeholder</code>, <code>required</code>.</li>
+  </ul>
+
+  <hr>
+  <h2>8. Some examples of Forms</h2>
+  
+  <h3>8.1. Registration Form and Project Form</h3>
+  <table border="1" cellpadding="15" cellspacing="0" width="100%">
+    <tr>
+      <th>Registration Form</th>
+      <th>Project Form</th>
+    </tr>
+    <tr>
+      <td>
+        <form>
+          <label>Username:</label>
+          <input type="text" name="username"><br><br>
+          <label>Email:</label>
+          <input type="email" name="email"><br><br>
+          <label>Password:</label>
+          <input type="password" name="password"><br><br>
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+          <input type="radio" name="gender" value="other">Other<br><br>
+          <input type="checkbox" name="agree"> I agree to terms<br><br>
+          <button>Register</button>
+        </form>
+      </td>
+
+      <td>
+        <form>
+          <label>Name:</label>
+          <input type="text" name="name"><br><br>
+          <label>Email:</label>
+          <input type="email" name="email"><br><br>
+          <label>Course:</label>
+          <select name="course">
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>MCA</option>
+          </select><br><br>
+          <label>Semester:</label>
+          <input type="number" name="sem"><br><br>
+          <label>Skills:</label><br>
+          <input type="checkbox" name="skill" value="html">HTML
+          <input type="checkbox" name="skill" value="css">CSS
+          <input type="checkbox" name="skill" value="js">JavaScript<br><br>
+          <label>About You:</label><br>
+          <textarea rows="4" cols="30"></textarea><br><br>
+          <button>Submit</button>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <h3>8.2. Feedback Form and User Registration Form</h3>
+  <table border="1" cellpadding="15" cellspacing="0" width="100%">
+    <tr>
+      <th>Feedback Form</th>
+      <th>User Registration Form</th>
+    </tr>
+    <tr>
+      <td valign="top">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" name="name"><br><br>
+
+          <label>Your Email:</label>
+          <input type="email" name="email"><br><br>
+
+          <label>Rate Us:</label><br>
+          <input type="radio" name="rate" value="1">1
+          <input type="radio" name="rate" value="2">2
+          <input type="radio" name="rate" value="3">3
+          <input type="radio" name="rate" value="4">4
+          <input type="radio" name="rate" value="5">5<br><br>
+
+          <label>Comments:</label><br>
+          <textarea rows="4" cols="25"></textarea><br><br>
+
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </td>
+
+      <td valign="top">
+        <form>
+          <label>Username:</label>
+          <input type="text" name="username"><br><br>
+
+          <label>Email:</label>
+          <input type="email" name="email"><br><br>
+
+          <label>Password:</label>
+          <input type="password" name="password"><br><br>
+
+          <label>Gender:</label><br>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+          <input type="radio" name="gender" value="other">Other<br><br>
+
+          <input type="checkbox" name="agree"> I agree to the terms<br><br>
+
+          <button type="submit">Register</button>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <h3>8.3. Bio Data Form</h3>
+  <table border="1" cellpadding="15" cellspacing="0" width="80%" align="center">
+    <tr>
+      <th>Bio Data Form</th>
+    </tr>
+    <tr>
+      <td>
+        <form>
+          <!-- Personal Information -->
+          <fieldset>
+              <legend>Personal Information</legend>
+
+              <label for="first">First name:</label>
+              <input type="text" id="first" name="first_name">
+              <label for="second">Last name:</label>
+              <input type="text" id="second" name="last_name">
+              <br><br>
+
+              <input type="radio" id="male" name="gender" value="Male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="Female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="Other">
+              <label for="other">Others</label>
+              <br><br>
+
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="DOB">
+              <br><br>
+
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email">
+              <br><br>
+
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" name="phone_number">
+              <br><br>
+          </fieldset>
+
+          <!-- Education -->
+          <fieldset>
+              <legend>Education</legend>
+
+              <label for="school">School name:</label>
+              <input type="text" id="school" name="school_name">
+              <br><br>
+
+              <label for="class">Class:</label>
+              <input type="text" id="class" name="class_name">
+              <br><br>
+
+              <label for="stream">Stream:</label>
+              <select id="stream" name="stream">
+                  <option value="" disabled selected>Select your Stream</option>
+                  <option value="Math">Math</option>
+                  <option value="Science">Science</option>
+                  <option value="Commerce">Commerce</option>
+                  <option value="Rest">Rest</option>
+              </select>
+              <br><br>
+
+              <label for="marksheet">Marksheet:</label>
+              <button>Choose file</button>
+          </fieldset>
+          <br>
+
+          <!-- Submit Button -->
+          <button>Submit</button>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+  <p><a href="./index.html">← Back to Home</a></p>
+  <p><b>Next:</b> <a href="./lecture6.html">Day 6: HTML Media →</a></p>
+
+</body>
+</html>

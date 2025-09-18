@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 3 - Nested Lists & Tables</title>
+</head>
+<body>
+  <h1>Lecture 3: Nested Lists & Tables</h1>
+  <h2>Defence Course - Day 3</h2>
+  <hr>
+
+  <table  border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td><iframe width="500" height="250" src="https://www.youtube.com/embed/AJ4E1zf5tQs?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X" title="HTML Nested Lists &amp; Tables: The Complete Guide with 10 Detailed Examples | HTML Full Course #02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+    </tr>
+  </table>
+  <hr>
+
+  <h2>1. Recap of Lists</h2>
+  <ul>
+    <li>Two main types of lists in HTML:
+      <ul>
+        <li><b>Ordered List (&lt;ol&gt;)</b> → Numbered items (1, 2, 3...)</li>
+        <li><b>Unordered List (&lt;ul&gt;)</b> → Bulleted items (•, ○, etc.)</li>
+      </ul>
+    </li>
+    <li>Basic example: A simple country list (India, USA, England).</li>
+  </ul>
+
+  <h2>2. What is a Nested List?</h2>
+  <ul>
+    <li>A <b>nested list</b> is a list placed inside another list item.</li>
+    <li>Useful for showing hierarchy or categories (e.g., Country → Cities).</li>
+    <li>Correct placement: the nested &lt;ul&gt; or &lt;ol&gt; should always be inside its parent &lt;li&gt;.</li>
+  </ul>
+
+  <h2>3. Example: Countries with Nested Cities</h2>
+  <p>Each country has its own sublist of cities.</p>
+  <ul>
+    <li>India
+      <ul>
+        <li>Delhi</li>
+        <li>Mumbai</li>
+        <li>Goa</li>
+      </ul>
+    </li>
+    <li>USA
+      <ul>
+        <li>California</li>
+        <li>Texas</li>
+      </ul>
+    </li>
+    <li>England
+      <ul>
+        <li>London</li>
+        <li>Oval</li>
+        <li>Yorkshire</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>4. Introduction to Tables</h2>
+  <ul>
+    <li>Tables are used to arrange data in rows and columns.</li>
+    <li>Main tags used:
+      <ul>
+        <li><b>&lt;table&gt;</b> → Creates the table.</li>
+        <li><b>&lt;tr&gt;</b> → Table row.</li>
+        <li><b>&lt;td&gt;</b> → Table data (cell).</li>
+        <li><b>&lt;th&gt;</b> → Table header (bold, centered by default).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>5. Some Examples of Tables</h2>
+  <table border="2" cellpadding="10" cellspacing="10" width="80%">
+        <tr>
+            <td valign="top">
+                <h3>Table 1</h3>
+                <table border="1">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>10</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>5</td>
+                        <td>$1.50</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>15</td>
+                        <td>$2.50</td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top">
+                <h3>Table 2</h3>
+                <table border="1">
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Row1 Cell1</td>
+                        <td>Row1 Cell2</td>
+                        <td>Row1 Cell3</td>
+                    </tr>
+                    <tr>
+                        <td>Row2 Cell2</td>
+                        <td>Row2 Cell3</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Row3 Cell1</td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top">
+                <h3>Table 3</h3>
+                <table border="1">
+                    <tr>
+                        <th>Level 1</th>
+                        <th>Level 2</th>
+                        <th>Level 3</th>
+                        <th>Level 4</th>
+                        <th>Level 5</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="6">System</td>
+                        <td rowspan="4">System Apps</td>
+                        <td rowspan="3">System Env</td>
+                        <td>App Test</td>
+                        <td rowspan="2">Foo</td>
+                    </tr>
+                    <tr>
+                        <td>App Memory</td>
+                    </tr>
+                    <tr>
+                        <td>App test</td>
+                        <td rowspan="2">bar</td>
+                    </tr>
+                    <tr>
+                        <td>System env 2</td>
+                        <td>App memory</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">System memory</td>
+                        <td>Memory func</td>
+                        <td>Foo</td>
+                    </tr>
+                    <tr>
+                        <td>Aps test</td>
+                        <td>bar</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+  <h2>6. Key Learnings</h2>
+  <ul>
+    <li>Nested lists help create hierarchical structures.</li>
+    <li>Tables organize information neatly into rows & columns.</li>
+    <li>Always structure HTML properly to keep it valid and readable.</li>
+  </ul>
+
+  <hr>
+  <p><a href="./index.html">← Back to Home</a></p>
+  <p><b>Next:</b> <a href="./lecture4.html">Day 4 - File Path System & Boilerplate →</a></p>
+</body>
+</html>

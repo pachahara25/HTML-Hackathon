@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 6 - HTML Media</title>
+</head>
+<body>
+    <h1>Lecture 6: HTML Media</h1>
+    <h2>Defence Course - Day 6</h2>
+    <hr>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td><iframe width="500" height="250" src="https://www.youtube.com/embed/NGYp1zCBthk?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X" title="Deploy Your First Project | Media Tag | Multi Page Website | HTML Full Course #05" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+        </tr>
+    </table>
+    <hr>
+    <h2>1. First Principle: The Web is More Than Text and Images</h2>
+    <p>The web should deliver not only text and images but also audio and video natively, without plugins. Earlier browsers required Flash, QuickTime, etc., which were inefficient and insecure.</p>
+
+    <h2>2. The Core Problem</h2>
+    <p>How to embed audio and video in a standardized, plugin-free way across all modern browsers?</p>
+
+    <h2>3. The Logical Solution: &lt;video&gt; and &lt;audio&gt; Tags</h2>
+    <p>HTML5 introduced dedicated tags for embedding media.</p>
+
+    <h2>4. Part 1: The Basics - Getting a Video on the Page</h2>
+    <pre>&lt;video src="my-awesome-video.mp4"&gt;&lt;/video&gt;</pre>
+    <p>Problem: Shows only the first frame, no play/pause/volume controls.</p>
+
+    <h3>4.1. The controls Attribute</h3>
+    <pre>&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;</pre>
+
+    <h2>5. Part 2: Intermediate - Attributes</h2>
+    <ul>
+        <li>width &amp; height → Set video dimensions</li>
+        <li>autoplay → Auto-plays (usually requires muted)</li>
+        <li>loop → Restarts video after ending</li>
+        <li>poster → Thumbnail image before play</li>
+    </ul>
+    <pre>&lt;video src="video.mp4" width="640" height="360" controls&gt;&lt;/video&gt;</pre>
+
+    <h2>6. Part 3: The &lt;audio&gt; Tag</h2>
+    <pre>&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;</pre>
+
+    <h2>7. Part 4: Advanced - Solving Real-World Problems</h2>
+
+    <h3>7.1. Problem #1: Different Browser Formats</h3>
+    <pre>
+&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+    </pre>
+
+    <h3>7.2. Problem #2: Accessibility - &lt;track&gt;</h3>
+    <pre>
+&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <h2>8. Two Methods to Embed Video</h2>
+
+    <h3>8.1. Example 1: Professional Way (&lt;source&gt;)</h3>
+    <pre>
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+    </pre>
+
+    <h3>8.2. Example 2: Simple Way (src Attribute)</h3>
+    <pre>&lt;video src="a.mp4" controls&gt;&lt;/video&gt;</pre>
+
+    <h3>8.3. Comparison Table</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Feature</th>
+            <th>&lt;source&gt; Method</th>
+            <th>src Method</th>
+        </tr>
+        <tr>
+            <td>Browser Compatibility</td>
+            <td>Excellent</td>
+            <td>Good but not guaranteed</td>
+        </tr>
+        <tr>
+            <td>Flexibility</td>
+            <td>High</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Simplicity</td>
+            <td>More complex</td>
+            <td>Very simple</td>
+        </tr>
+        <tr>
+            <td>Fallback</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Best Use Case</td>
+            <td>Public websites</td>
+            <td>Quick tests</td>
+        </tr>
+    </table>
+    <br>
+    <h3>8.4. Example of Audio and Video Tag</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td><video src="./Video - Trim.mp4" width="500" height="250" controls></video></td>
+            <td><audio src="./Naam Chale (Official Video) Vikram Sarkar  New Haryanvi Songs Haryanavi 2025 Latest Haryanvi Songs.mp3" width="500" height="250" controls></audio></td>
+        </tr>
+    </table>
+
+    <h2>9. HTML Entities (Symbols)</h2>
+    <h3>9.1. Copyright Symbol ©</h3>
+    <p>Entity Name: &amp;copy;</p>
+    <p>Entity Number: &amp;#169;</p>
+
+    <pre>
+        &lt;footer&gt;
+        &lt;p&gt;Copyright &amp;copy; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+        &lt;/footer&gt;
+    </pre>
+
+    <h3>9.2. Other Common Entities</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Symbol</th>
+            <th>Description</th>
+            <th>Entity Name</th>
+            <th>Entity Number</th>
+        </tr>
+        <tr><td>©</td><td>Copyright</td><td>&amp;copy;</td><td>&amp;#169;</td></tr>
+        <tr><td>®</td><td>Registered Trademark</td><td>&amp;reg;</td><td>&amp;#174;</td></tr>
+        <tr><td>™</td><td>Trademark</td><td>&amp;trade;</td><td>&amp;#8482;</td></tr>
+        <tr><td>&lt;</td><td>Less-than</td><td>&amp;lt;</td><td>&amp;#60;</td></tr>
+        <tr><td>&gt;</td><td>Greater-than</td><td>&amp;gt;</td><td>&amp;#62;</td></tr>
+        <tr><td>&amp;</td><td>Ampersand</td><td>&amp;amp;</td><td>&amp;#38;</td></tr>
+        <tr><td>"</td><td>Double Quote</td><td>&amp;quot;</td><td>&amp;#34;</td></tr>
+        <tr><td>€</td><td>Euro Sign</td><td>&amp;euro;</td><td>&amp;#8364;</td></tr>
+    </table>
+
+    <hr>
+    <p><a href="./index.html">← Back to Home</a></p>
+    
+</body>
+</html>

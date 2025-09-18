@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 4 - File Path System & Boilerplate</title>
+</head>
+<body>
+
+    <h1>Lecture 4: File Path and Structure</h1>
+    <h2>Defence Course - Day 4</h2>
+    <hr>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td><iframe width="500" height="250" src="https://www.youtube.com/embed/k78lNSAB8VY?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X" title="File Path in HTML | HTML BoilerPlate Code | DIV + Class + ID | HTML Full Course #03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+        </tr>
+    </table>
+    <hr>
+    <h2>1. File Path System</h2>
+    <ul>
+        <li>Website = collection of files (HTML, CSS, JS, images, etc.).</li>
+        <li>Browser needs a <b>file path</b> to locate files.</li>
+    </ul>
+
+  <h3>1.1 Relative Paths</h3>
+  <ul>
+    <li>Same folder → <code>about.html</code></li>
+    <li>Sub-folder → <code>images/logo.png</code></li>
+    <li>Parent folder → <code>../images/logo.png</code></li>
+  </ul>
+
+  <h3>1.2 Absolute Paths</h3>
+  <ul>
+    <li>Full web address (http/https).</li>
+    <li>Used only for external resources.</li>
+    <li><b>Don’t use</b> local paths like <code>C:/Users/...</code></li>
+  </ul>
+
+  <h3>1.3 Why Relative is Safer</h3>
+  <ul>
+    <li>Browser runs in a secure <b>Sandbox</b>.</li>
+    <li>Prevents malicious websites from accessing local files.</li>
+  </ul>
+
+  <h3>1.4 Rules of Thumb</h3>
+  <ul>
+    <li>Own files → Use <b>Relative paths</b>.</li>
+    <li>External files → Use <b>Absolute paths</b>.</li>
+  </ul>
+
+  <h3>1.5 File System Differences</h3>
+  <ul>
+    <li>Windows: Root = <code>C:\</code>, separator = <code>\</code></li>
+    <li>macOS/Linux: Root = <code>/</code>, separator = <code>/</code></li>
+  </ul>
+
+  <h2>2. HTML Boilerplate</h2>
+  <ul>
+    <li>Standard template to start every HTML page.</li>
+    <li>Includes <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html lang&gt;</code>, <code>&lt;meta charset&gt;</code>, <code>&lt;meta viewport&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>.</li>
+    <li>Ensures compatibility, mobile-friendliness, SEO.</li>
+  </ul>
+
+  <h3>2.1 Why Boilerplate is Important</h3>
+  <ul>
+    <li>Without → quirks mode, broken characters, bad mobile view.</li>
+    <li>With → predictable rendering, accessibility, SEO-friendly.</li>
+  </ul>
+
+  <h2>3. Multipage Website</h2>
+  <ul>
+    <li>Breaks content into multiple pages.</li>
+    <li>Use <code>&lt;a&gt;</code> for navigation.</li>
+    <li>Keep common header & footer for consistency.</li>
+  </ul>
+
+  <h2>4. Grouping & Labeling Elements</h2>
+  <ul>
+    <li><b>div</b>: Generic block container.</li>
+    <li><b>id</b>: Unique identifier for one element.</li>
+    <li><b>class</b>: Reusable label for multiple elements.</li>
+    <li><b>span</b>: Inline container for highlighting text.</li>
+    <li>Semantic tags: <b>header, footer, main</b>.</li>
+  </ul>
+
+  <hr>
+    <p><a href="./index.html">← Back to Home</a></p>
+    <p><strong>Next:</strong> <a href="./lecture5.html">Day 5: HTML Forms →</a></p>
+
+
+</body>
+</html>
